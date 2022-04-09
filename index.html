@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>calculator</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <!-- lets move to style.css then //okay-->
+  <body>
+    <div id="Calculator">
+      <table border="1">
+        <!-- alafu eka pia 4 colums <td> -->
+        <tr>
+          <!-- lets style this table then well move to js okay?//okay -->
+          <td><input type="button" value="c" onclick="clr()" /></td>
+          <td colspan="3"><input type="text" id="dis" /></td>
+        </tr>
+        <!-- hiyo ya kudisplay inafaa ikue pekeyake kwa row yake  tutatumia col span //ooh okay-->
+        <!-- inafaa isikue na row span -->
+        <tr></tr>
+        <!--hii ni ya nini//spacing between one row na hiyo ingine // si we can space them tukitumia css?-//yes i just wanted to see lol // okay no problem😂😂//twende css // sawa -->
+        <tr>
+          <td><input type="button" value="+" onclick="disp('+')" /></td>
+          <!--Hizi tubuttons tundogondani unaziona// ebu tutry kutumia input//iko sawa sasa//okay lets use input-->
+          <td><input type="button" value="1" onclick="disp('1')" /></td>
+          <!--Am sending you an image to your whatsapp ryna//ya nini?-->
+          <td><input type="button" value="2" onclick="disp('2')" /></td>
+          <td><input type="button" value="3" onclick="disp('3')" /></td>
+        </tr>
+        <tr></tr>
+
+        <tr>
+          <!-- inafaa isikue na row span -->
+          <td><input type="button" value="-" onclick="disp('-')" /></td>
+          <!--Hizi tubuttons tundogondani unaziona// ebu tutry kutumia input//iko sawa sasa//okay lets use input-->
+          <td><input type="button" value="4" onclick="disp('4')" /></td>
+          <!--Am sending you an image to your whatsapp ryna//ya nini?-->
+          <td><input type="button" value="5" onclick="disp('5')" /></td>
+          <td><input type="button" value="6" onclick="disp('6')" /></td>
+        </tr>
+
+        <tr></tr>
+        <tr>
+          <!-- inafaa isikue na row span -->
+          <td><input type="button" value="*" onclick="disp('*')" /></td>
+          <!--Hizi tubuttons tundogondani unaziona// ebu tutry kutumia input//iko sawa sasa//okay lets use input-->
+          <td><input type="button" value="7" onclick="disp('7')" /></td>
+          <!--Am sending you an image to your whatsapp ryna//ya nini?-->
+          <td><input type="button" value="8" onclick="disp('8')" /></td>
+          <td><input type="button" value="9" onclick="disp('9')" /></td>
+        </tr>
+
+        <tr></tr>
+        <tr>
+          <td><input type="button" value="/" onclick="disp('/')" /></td>
+          <!--Hizi tubuttons tundogondani unaziona// ebu tutry kutumia input//iko sawa sasa//okay lets use input-->
+          <td><input type="button" value="." onclick="disp('.')" /></td>
+          <!--Am sending you an image to your whatsapp ryna//ya nini?-->
+          <td><input type="button" value="0" onclick="disp('0')" /></td>
+          <td><input type="button" value="=" onclick="solve()" /></td>
+        </tr>
+
+        <tr></tr>
+      </table>
+    </div>
+    <!-- we will use tables is that okay .. then later we will use form //ooh nimekuelewa sa tueke buttons kwa table ama// yes //form nayo ni ya nini? i ment tucreate na table pekeyake then tucreate na form pekeyake tuone diff//ooh okay -->
+
+    <script>
+      function solve() {
+        let a = document.getElementById("dis").value;
+        let b = eval(a); //which logic are you trying to use .. si the eval() function is used to evaluat arithmetic expressions ama?
+        document.getElementById("dis").val = b;
+      }
+      function disp(val) {
+        document.getElementById("dis").value += val;
+      }
+
+      function clr() {
+        document.getElementById("dis").value = "";
+      }
+    </script>
+  </body>
+</html>
